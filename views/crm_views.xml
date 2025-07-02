@@ -6,7 +6,7 @@
   </record>
 
   <!-- Vista Tree básica -->
-  <record id="view_crm_lead_tree_comercial" model="ir.ui.view">
+  <record id="sid_view_crm_lead_tree_comercial" model="ir.ui.view">
     <field name="name">crm.lead.tree.comercial</field>
     <field name="model">crm.lead</field>
     <field name="arch" type="xml">
@@ -29,7 +29,7 @@
     <field name="groups_id" eval="[(4, ref('crm_comercial.group_crm_comercial'))]"/>
   </record>
 
-  <record id="view_crm_lead_form_restricto_full" model="ir.ui.view">
+  <record id="sid_view_crm_lead_form_comercial" model="ir.ui.view">
     <field name="name">crm.lead.form.restricto.full</field>
     <field name="model">crm.lead</field>
     <field name="priority" eval="50"/>
@@ -163,6 +163,8 @@
     <field name="name">Mis Oportunidades</field>
     <field name="res_model">crm.lead</field>
     <field name="view_mode">tree,form</field>
+      <field name="views" eval="[(ref('sid_view_crm_lead_tree_comercial'), 'tree'),
+                             (ref('sid_view_crm_lead_form_comercial'), 'form')]"/>
     <field name="view_id" ref="view_crm_lead_tree_comercial"/>
     <field name="domain">[(1, '=', 1)]</field>
     <field name="context">{}</field>
