@@ -21,7 +21,7 @@
             <field name="activity_ids" widget="list_Activity"/>
             <field name="my_activity_date_deadline" widget="list_Activity"/>
             <field name="user_id"/>
-            <field name="commercial_crm"/>
+            <field name="comercial_crm"/>
             <field name="expected_revenue"/>
             <field name="stage_id"/>
       </tree>
