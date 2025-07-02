@@ -12,6 +12,7 @@
     <field name="arch" type="xml">
       <tree string="Oportunidades">
             <field name="partner_id"/>
+            <field name="show_enrich_button" invisible="1"/>
             <field name="code_crm"/>
             <field name="stage_id"/>
             <field name="grupo_oportunidad"/>
@@ -24,6 +25,7 @@
             <field name="comercial_crm"/>
             <field name="expected_revenue"/>
             <field name="stage_id"/>
+            <field name="type" invisible="1"/>
       </tree>
     </field>
     <field name="groups_id" eval="[(4, ref('crm_comercial.group_crm_comercial'))]"/>
@@ -86,6 +88,8 @@
 
           <group>
             <group name="opportunity_partner">
+              <field name="type" invisible="1"/>
+              <field name="show_enrich_button" invisible="1"/>
               <field name="type_leads"/>
               <field name="partner_id" string="Cliente" required="1"
                      options="{'no_create': True, 'no_create_edit': True}"
