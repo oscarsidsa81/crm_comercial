@@ -161,7 +161,7 @@
   </record>
      <!-- Acción de ventana -->
 
-  <record id="action_crm_lead_comercial" model="ir.actions.act_window">
+  <record id="action_crm_lead_comercial_tree" model="ir.actions.act_window">
     <field name="name">Mis Oportunidades</field>
     <field name="res_model">crm.lead</field>
     <field name="view_mode">tree,form</field>
