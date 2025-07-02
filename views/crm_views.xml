@@ -168,7 +168,7 @@
     <field name="view_mode">tree,form</field>
       <field name="views" eval="[(ref('sid_view_crm_lead_tree_comercial'), 'tree'),
                              (ref('sid_view_crm_lead_form_comercial'), 'form')]"/>
-    <field name="view_id" ref="view_crm_lead_tree_comercial"/>
+    <field name="view_id" ref="sid_view_crm_lead_tree_comercial"/>
     <field name="domain">[(1, '=', 1)]</field>
     <field name="context">{}</field>
     <field name="groups_id" eval="[(4, ref('crm_comercial.group_crm_comercial'))]"/>
