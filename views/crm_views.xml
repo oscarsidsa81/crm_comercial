@@ -2,7 +2,6 @@
   <!-- Grupo personalizado -->
   <record id="group_crm_comercial" model="res.groups">
     <field name="name">Comercial</field>
-    <field name="category_id" ref="base.module_category_hidden"/>
   </record>
 
   <!-- Vista Tree básica -->
