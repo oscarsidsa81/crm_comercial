@@ -44,7 +44,7 @@
           <button name="348" string="Convertir a oportunidad" type="action" class="oe_highlight" data-hotkey="v"
                   attrs="{'invisible': ['|', ('type', '=', 'opportunity'), ('active', '=', False)]}"/>
           <button name="toggle_active" string="Restaurar" type="object" data-hotkey="z"
-                  attrs="{'invisible': ['|', ('probability', '&gt;'', 0), ('active', '=', True)]}"/>
+                  attrs="{'invisible': ['|', ('probability', '&gt;', 0), ('active', '=', True)]}"/>
           <button name="action_set_lost" string="Perdido" type="object" data-hotkey="l" title="Marcar como perdido"
                   attrs="{'invisible': ['|', ('type', '=', 'opportunity'), '&amp;', ('probability', '=', 0), ('active', '=', False)]}"/>
           <field name="stage_id" widget="statusbar" options="{'clickable': '1', 'fold_field': 'fold'}"
