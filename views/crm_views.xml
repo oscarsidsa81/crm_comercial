@@ -40,11 +40,11 @@
                   attrs="{'invisible': ['|','|', ('active','=',False), ('probability', '=', 100), ('type', '=', 'lead')]}"/>
           <button name="347" string="Perdido" data-hotkey="l" title="Marcar como perdido" type="action"
                   context="{'default_lead_id': active_id}"
-                  attrs="{'invisible': ['|', ('type', '=', 'lead'), '&amp;', ('active', '=', False), ('probability', '<', 100)]}"/>
+                  attrs="{'invisible': ['|', ('type', '=', 'lead'), '&amp;', ('active', '=', False), ('probability', '&lt;', 100)]}"/>
           <button name="348" string="Convertir a oportunidad" type="action" class="oe_highlight" data-hotkey="v"
                   attrs="{'invisible': ['|', ('type', '=', 'opportunity'), ('active', '=', False)]}"/>
           <button name="toggle_active" string="Restaurar" type="object" data-hotkey="z"
-                  attrs="{'invisible': ['|', ('probability', '>', 0), ('active', '=', True)]}"/>
+                  attrs="{'invisible': ['|', ('probability', '&gt;'', 0), ('active', '=', True)]}"/>
           <button name="action_set_lost" string="Perdido" type="object" data-hotkey="l" title="Marcar como perdido"
                   attrs="{'invisible': ['|', ('type', '=', 'opportunity'), '&amp;', ('probability', '=', 0), ('active', '=', False)]}"/>
           <field name="stage_id" widget="statusbar" options="{'clickable': '1', 'fold_field': 'fold'}"
@@ -60,24 +60,24 @@
                     attrs="{'invisible': [('type', '=', 'lead')]}">
               <div class="o_stat_info">
                 <field name="calendar_event_count" class="o_stat_value"/>
-                <span class="o_stat_text" attrs="{'invisible': [('calendar_event_count', '<', 2)]}">Juntas</span>
-                <span class="o_stat_text" attrs="{'invisible': [('calendar_event_count', '>', 1)]}">Junta</span>
+                <span class="o_stat_text" attrs="{'invisible': [('calendar_event_count', '&lt;', 2)]}">Juntas</span>
+                <span class="o_stat_text" attrs="{'invisible': [('calendar_event_count', '&gt;'', 1)]}">Junta</span>
               </div>
             </button>
             <button name="action_show_potential_duplicates" type="object" class="oe_stat_button" icon="fa-star"
-                    attrs="{'invisible': [('duplicate_lead_count', '<', 1)]}">
+                    attrs="{'invisible': [('duplicate_lead_count', '&lt;', 1)]}">
               <div class="o_stat_info">
                 <field name="duplicate_lead_count" class="o_stat_value"/>
-                <span class="o_stat_text" attrs="{'invisible': [('duplicate_lead_count', '<', 2)]}">Leads similares</span>
-                <span class="o_stat_text" attrs="{'invisible': [('duplicate_lead_count', '>', 1)]}">Lead similar</span>
+                <span class="o_stat_text" attrs="{'invisible': [('duplicate_lead_count', '&lt;', 2)]}">Leads similares</span>
+                <span class="o_stat_text" attrs="{'invisible': [('duplicate_lead_count', '&gt;'', 1)]}">Lead similar</span>
               </div>
             </button>
             <button class="oe_stat_button" icon="fa-file-o" type="action" name="1060" string="Documentos adjuntos"/>
           </div>
 
           <widget name="web_ribbon" title="Perdido" bg_color="bg-danger"
-                  attrs="{'invisible': ['|', ('probability', '>', 0), ('active', '=', True)]}"/>
-          <widget name="web_ribbon" title="Ganado" attrs="{'invisible': [('probability', '<', 100)]}"/>
+                  attrs="{'invisible': ['|', ('probability', '&gt;'', 0), ('active', '=', True)]}"/>
+          <widget name="web_ribbon" title="Ganado" attrs="{'invisible': [('probability', '&lt;', 100)]}"/>
 
           <div class="oe_title">
             <label for="name"/>
