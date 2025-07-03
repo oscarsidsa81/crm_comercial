@@ -183,6 +183,7 @@
     groups="crm_comercial.group_crm_comercial"
   />
 
+    <data>
     <!-- Restringir menús del CRM solo para usuarios de ventas (no para grupo comercial) -->
 
     <record id="crm.crm_menu_sales" model="ir.ui.menu">
@@ -243,6 +244,7 @@
       ])]"/>
     </record>
     -->
+    </data>
 </odoo>
 
 
