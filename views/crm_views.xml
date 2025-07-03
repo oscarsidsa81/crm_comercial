@@ -173,6 +173,26 @@
     <field name="groups_id" eval="[(4, ref('crm_comercial.group_crm_comercial'))]"/>
   </record>
 
+  <record id="sid_crm_lead_form_inherit_comercial_button_groups" model="ir.ui.view">
+  <field name="name">crm.lead.form.inherit.comercial.button.groups</field>
+  <field name="model">crm.lead</field>
+  <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+  <field name="priority" eval="1000"/>
+  <field name="arch" type="xml">
+    <data>
+      <xpath expr="//button[@name='action_view_sale_quotation']" position="attributes">
+        <attribute name="groups">sales_team.group_sale_manager,sales_team.group_sale_salesman_all_leads,sales_team.group_sale_salesman</attribute>
+      </xpath>
+      <xpath expr="//button[@name='action_view_sale_order']" position="attributes">
+        <attribute name="groups">sales_team.group_sale_manager,sales_team.group_sale_salesman_all_leads,sales_team.group_sale_salesman</attribute>
+      </xpath>
+      <xpath expr="//button[@name='action_show_potential_duplicates']" position="attributes">
+        <attribute name="groups">sales_team.group_sale_manager</attribute>
+      </xpath>
+    </data>
+  </field>
+  </record>
+
     <!-- Menú: Mis Oportunidades (hijo de CRM) -->
   <menuitem
     id="menu_crm_lead_comercial"
