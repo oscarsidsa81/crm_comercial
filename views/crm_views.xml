@@ -172,6 +172,16 @@
     <field name="context">{}</field>
     <field name="groups_id" eval="[(4, ref('crm_comercial.group_crm_comercial'))]"/>
   </record>
+
+    <!-- Menú: Mis Oportunidades (hijo de CRM) -->
+  <menuitem
+    id="menu_crm_lead_comercial"
+    name="Mis Oportunidades"
+    parent="crm.crm_menu_root"
+    action="crm_comercial.action_crm_lead_comercial_tree"
+    sequence="10"
+    groups="crm_comercial.group_crm_comercial"
+  />
 </odoo>
 
 
