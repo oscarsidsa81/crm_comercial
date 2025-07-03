@@ -197,9 +197,6 @@
   <menuitem id="crm.menu_import_crm"
             groups="sales_team.group_sale_manager,sales_team.group_sale_salesman_all_leads,sales_team.group_sale_salesman"/>
 
-  <menuitem id="__export__.ir_ui_menu_623_50bae9e1"
-            groups="sales_team.group_sale_manager,sales_team.group_sale_salesman_all_leads,sales_team.group_sale_salesman"/>
-
   <menuitem id="crm.crm_menu_report"
             groups="sales_team.group_sale_manager,sales_team.group_sale_salesman_all_leads,sales_team.group_sale_salesman"/>
 
