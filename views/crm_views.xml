@@ -182,6 +182,17 @@
     sequence="10"
     groups="crm_comercial.group_crm_comercial"
   />
+
+    <!-- Ocultar menús al grupo Comercial -->
+
+  <menuitem id="crm.crm_menu_sales" groups="base.group_user,!crm_comercial.group_crm_comercial"/>
+  <menuitem id="oct_crm_extra_fields.crm_menu_grupo_oportunidad" groups="base.group_user,!crm_comercial.group_crm_comercial"/>
+  <menuitem id="crm.crm_menu_leads" groups="base.group_user,!crm_comercial.group_crm_comercial"/>
+  <menuitem id="crm.menu_import_crm" groups="base.group_user,!crm_comercial.group_crm_comercial"/>
+  <menuitem id="__export__.ir_ui_menu_623_50bae9e1" groups="base.group_user,!crm_comercial.group_crm_comercial"/>
+  <menuitem id="crm.crm_menu_report" groups="base.group_user,!crm_comercial.group_crm_comercial"/>
+  <menuitem id="crm.crm_menu_config" groups="base.group_user,!crm_comercial.group_crm_comercial"/>
+
 </odoo>
 
 
