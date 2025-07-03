@@ -18,8 +18,10 @@
             <field name="name"/>
             <field name="date_presentation_crm"/>
             <field name="due_date_crm"/>
-            <field name="activity_ids" widget="list_Activity"/>
-            <field name="my_activity_date_deadline" widget="list_Activity"/>
+            <field name="activity_ids" widget="list_activity"/>
+            <field name="activity_user_id" optional="hide" string="Activity by" widget="many2one_avatar_user"/>
+            <field name="my_activity_date_deadline" string="My Deadline" widget="remaining_days" options="{'allow_order': '1'}"/>
+            <field name="activity_calendar_event_id" invisible="1"/>
             <field name="user_id"/>
             <field name="comercial_crm"/>
             <field name="expected_revenue"/>
@@ -161,7 +163,7 @@
   </record>
      <!-- Acción de ventana -->
 
-  <record id="action_crm_lead_comercial_tree" model="ir.actions.act_window">
+  <record id="sid_action_crm_lead_comercial_tree" model="ir.actions.act_window">
     <field name="name">Mis Oportunidades</field>
     <field name="res_model">crm.lead</field>
     <field name="view_mode">tree,form</field>
@@ -198,7 +200,7 @@
     id="menu_crm_lead_comercial"
     name="Mis Oportunidades"
     parent="crm.crm_menu_root"
-    action="crm_comercial.action_crm_lead_comercial_tree"
+    action="crm_comercial.sid_action_crm_lead_comercial_tree"
     sequence="10"
     groups="crm_comercial.group_crm_comercial"
   />
